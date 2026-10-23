@@ -7,7 +7,7 @@
   * @attention
   *
   * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
+  * All rights reserved.git status
   *
   * This software is licensed under terms that can be found in the LICENSE file
   * in the root directory of this software component.
@@ -73,6 +73,7 @@ static void Start_PWM(void)
   __HAL_TIM_SET_COUNTER(&htim2, 0U);
   __HAL_TIM_CLEAR_FLAG(&htim2, TIM_FLAG_UPDATE);
   __HAL_TIM_DISABLE_IT(&htim2, TIM_IT_UPDATE);
+/* Start PWM generation on TIM2 Channel 1 for the A-Scan pulse output. */
 
   if (HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1) != HAL_OK)
   {
